@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  :root {
+    --red: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light_grayish_violet: hsl(270, 3%, 87%);
+    --Dark_grayish_violet: hsl(279, 6%, 55%);
+    --Very_dark_violet: hsl(278, 68%, 11%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-style: 18px;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  body {
+    /* background: #222; */
+  }
+
+  .red {
+    color: var(--red);
+  }
+
+  .light-violet {
+    color: var(--Light_grayish_violet);
+  }
+
+  .dark-violet {
+    color: var(--Dark_grayish_violet);
+  }
+
+  .very-dark-violet {
+    color: var(--Very_dark_violet);
+  }
+}
+
+@layer components {
+  .input {
+    @apply text-sm w-full ss:text-base border-2 border-gray-200 rounded-lg py-2 pl-3 xl:text-lg outline-[#8A2BE2]  hover:border-[#8A2BE2] hover:cursor-pointer transition-all duration-150;
+  }
+
+  .input-error {
+    @apply border-2 border-[#FF5252] outline-[#FF5252];
+  }
+
+  .label {
+    @apply uppercase text-xs ss:text-sm very-dark-violet font-bold tracking-wider inline-flex pt-5 pb-3 xl:text-base;
+  }
+  .btn-bg {
+    background: var(--Very_dark_violet);
+  }
+
+  .btn-hover:hover {
+    background: scale(1.05);
+  }
+}
